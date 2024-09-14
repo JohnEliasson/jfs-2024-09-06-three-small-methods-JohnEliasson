@@ -50,6 +50,17 @@ class ThreeSmallMethodsTest {
     assertTrue(legallyManInSweden);
   }
 
+  @ParameterizedTest
+  @ValueSource(strings = {
+          "200314229",
+          "196209212003",
+          "1234",
+  })
+  void hasLegalGenderManInSwedenShouldGiveFalse(String personnummer){
+    boolean legallyManInSweden = methods.hasLegalGenderManInSweden(personnummer);
+    assertFalse(legallyManInSweden);
+  }
+
   @Test
   void firstTwoDigitIntegerShouldBe15(){
     int[] data = {1, 2, 15, 73};
