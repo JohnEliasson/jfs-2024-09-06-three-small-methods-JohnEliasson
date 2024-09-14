@@ -81,6 +81,13 @@ class ThreeSmallMethodsTest {
   }
 
   @Test
+  void firsTwoDigitIntegerShouldBeMinusWHenThereAreNoTwoDidgitIntegers(){
+    int[] data = {1, 2, 3, 445, -500};
+    assertEquals(-1, methods.firstTwoDigitInteger(data));
+  }
+
+
+  @Test
   void firstTwoDigitIntegerShouldSkip3DigitNumbers(){
     int[] data = {100, 1, 12};
     assertEquals(12, methods.firstTwoDigitInteger(data));
