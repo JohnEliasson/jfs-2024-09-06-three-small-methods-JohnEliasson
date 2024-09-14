@@ -15,16 +15,18 @@ public class ThreeSmallMethods {
 
         int lengthOfPersonalNumber = personalNumber.length();
         int indexOfSecondToLast = lengthOfPersonalNumber -2;
-        char c = personalNumber.charAt(indexOfSecondToLast);
-
-
-
+        char secondToLastDigit = personalNumber.charAt(indexOfSecondToLast);
 
         if (lengthOfPersonalNumber == 10) {
-
+            if (secondToLastDigit % 2 != 0) {
+                return true;
+            } else {
+                return false;
             }
+        } else {
+            return false;
+        }
 
-        return true;
     }
 
     public int firstTwoDigitInteger(int[] numbers) {
