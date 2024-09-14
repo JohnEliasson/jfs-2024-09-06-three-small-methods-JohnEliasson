@@ -14,10 +14,10 @@ public class ThreeSmallMethods {
     public boolean hasLegalGenderManInSweden(String personalNumber){
 
         int lengthOfPersonalNumber = personalNumber.length();
-        int indexOfSecondToLast = lengthOfPersonalNumber -2;
-        char secondToLastDigit = personalNumber.charAt(indexOfSecondToLast);
 
         if (lengthOfPersonalNumber == 10) {
+            int indexOfSecondToLast = lengthOfPersonalNumber -2;
+            char secondToLastDigit = personalNumber.charAt(indexOfSecondToLast);
             if (secondToLastDigit % 2 != 0) {
                 return true;
             } else {
