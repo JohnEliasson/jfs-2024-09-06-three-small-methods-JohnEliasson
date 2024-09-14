@@ -30,6 +30,19 @@ public class ThreeSmallMethods {
     }
 
     public int firstTwoDigitInteger(int[] numbers) {
+        for (int i = 0; i < numbers.length; i++) {
+            int currentNumber = numbers[i];
+
+            if (currentNumber < 0){
+                int negativeNumber = Math.abs(currentNumber);
+                if (negativeNumber > 9 && negativeNumber < 100){
+                    return currentNumber;
+                }
+            }
+            if (currentNumber > 9 && currentNumber < 100){
+               return currentNumber;
+            }
+       }
         return -1;
     }
 }
