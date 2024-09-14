@@ -13,7 +13,18 @@ public class ThreeSmallMethods {
 
     public boolean hasLegalGenderManInSweden(String personalNumber){
 
-        return false;
+        int lengthOfPersonalNumber = personalNumber.length();
+        int indexOfSecondToLast = lengthOfPersonalNumber -2;
+        char c = personalNumber.charAt(indexOfSecondToLast);
+
+
+
+
+        if (lengthOfPersonalNumber == 10) {
+
+            }
+
+        return true;
     }
 
     public int firstTwoDigitInteger(int[] numbers) {
